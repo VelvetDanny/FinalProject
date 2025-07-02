@@ -13,16 +13,25 @@ public class Main {
             int choice = InputValidator.getUserInput();
 
             switch (choice) {
-                case 1 -> manager.addItem();
-                case 2 -> manager.sellItem();
-                case 3 -> manager.displayInventory();
-                case 4 -> manager.displaySoldOut();
-                case 5 -> {
+                case 1:
+                    manager.addItem();
+                    break;
+                case 2:
+                    manager.sellItem();
+                    break;
+                case 3:
+                    manager.displayInventory();
+                    break;
+                case 4:
+                    manager.displaySoldOut();
+                    break;
+                case 5:
                     manager.saveData();
                     System.out.println("Exiting and saving data...");
                     return;
-                }
-                default -> System.out.println("Invalid option.");
+                default:
+                    System.out.println("Invalid option.");
+                    break;
             }
         }
     }
